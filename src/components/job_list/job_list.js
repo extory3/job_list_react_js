@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { ReactComponent as PinSVG } from "./pin.svg";
+import { ReactComponent as CompanySVG } from "./company.svg";
 class JobList extends Component {
   render() {
     return (
@@ -42,9 +43,14 @@ const JobInstance = (props) => {
         with desktop publishing software like Aldus PageMaker including versions
         of Lorem Ipsum.
       </p>
-      <p className="company_name">Swarm Technologies</p>
+      <div>
+        {" "}
+        <CompanySVG className="company_svg" />
+        <p className="company_name">Swarm Technologies</p>
+      </div>
       <p className="location_info">
         <PinSVG className="pin_svg" />
+
         <span>Gamburger, Germany</span>
       </p>
     </article>

@@ -1,0 +1,9 @@
+.searcher_container {
+  width: 90%;
+  height: 450px;
+  margin: 0 auto;
+  background-color: var(--primary-color);
+  border: 1px solid rgba(0, 0, 0, 0);
+  padding: 1.5em;
+  border-radius: 4px;
+}
