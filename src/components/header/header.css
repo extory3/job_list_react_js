@@ -17,12 +17,22 @@ header {
 }
 
 #logo {
-  font-size: 1.85em;
+  /* font-size: 1.85em;
   margin-left: 1.5rem;
   font-weight: bold;
   color: #272e4f;
-  letter-spacing: 1.5px;
+  height: 100px; */
+  background-image: url(./logo_transparent.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  display: block;
+  height: 5em;
+  width: 200px;
+  margin-left: 1em;
 }
+
 #post_job {
   margin-right: 1.5rem;
 }
@@ -35,9 +45,14 @@ button {
   border-radius: 1.2em;
   text-align: center;
   background-color: #4e9af1;
-  transition: all 0.2s;
+  transition: all 0.4s;
+  outline: none;
   cursor: pointer;
 }
 button:hover {
-  border-color: rgba(55, 255, 255, 1);
+  border-color: 2px solid #4e9af1;
+  background-color: #892cdc;
+}
+button:active {
+  outline: none;
 }
