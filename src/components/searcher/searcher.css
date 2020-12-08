@@ -1,22 +1,49 @@
 .searcher_container {
-  width: 90%;
-  height: 450px;
+  width: 60%;
+  height: 300px;
   margin: 0 auto;
   background-color: var(--primary-color);
   border: 1px solid rgba(0, 0, 0, 0);
   padding: 1.5em;
+
+  margin-bottom: 40px;
   border-radius: 4px;
 }
+.left_filter {
+  float: left;
+  padding: 1.3em;
+  width: 30%;
+  height: 100%;
+}
+.job_type,
+.english_level {
+  margin-bottom: 15px;
+}
+ul {
+  margin-top: 0.75em;
+  display: inline-flex;
+  flex-flow: wrap;
+}
+ul li {
+  list-style-type: none;
+  cursor: pointer;
+  text-align: center;
+  border: 2px solid #e6e6e6;
+  width: 130px;
+  height: 2em;
+  color: black;
+  border-radius: 4px;
+  background-color: #ffffff;
+  padding: 0.25em;
+}
 
-form select {
-  display: block;
-  position: relative;
-  font-size: 20px;
-  -moz-appearance: none; /* Firefox */
-  -webkit-appearance: none; /* Safari and Chrome */
-  appearance: none;
-  padding: 0.5em 0.75em;
-  margin: 0;
-  border: 2px solid black;
-  background-color: #fffafa;
+ul li:hover {
+  background-color: #f2f4fb;
+}
+
+input {
+  font-size: 1.1rem;
+  width: 60%;
+  padding: 1.1em 1.5em;
+  border: 2px solid #e6e6e6;
 }
