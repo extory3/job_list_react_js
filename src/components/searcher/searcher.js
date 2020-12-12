@@ -1,6 +1,21 @@
 import React, { Component } from "react";
 import "./searcher.css";
+const job_type_items = ["Engineering", "Design", "Marketing", "IT", "Business"];
+const n = job_type_items.length;
+
 class Searcher extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { isToggleOn: [false, false, false, false, false] };
+
+    this.handleClick = this.handleClick.bind(this);
+  }
+  handleClick = (index) => {
+    var getState = this.state.isToggleOn;
+    if (this.state.isToggleOn[index] == true) getState[index] = false;
+    else getState[index] = true;
+    this.setState({ isToggleOn: getState });
+  };
   render() {
     return (
       <section className="searcher_container">
@@ -11,9 +26,17 @@ class Searcher extends Component {
           <section className="job_type">
             <p>Job Type</p>
             <ul>
-              <li>Engineering</li>
-              <li>Design</li>
-              <li>Marketing</li>
+              {job_type_items.map((a, index) => {
+                return (
+                  <li
+                    key={a}
+                    className={this.state.isToggleOn[index] ? "isOn" : "isOff"}
+                    onClick={this.handleClick.bind(this, index)}
+                  >
+                    {a}
+                  </li>
+                );
+              })}
             </ul>
           </section>
 
@@ -32,15 +55,13 @@ class Searcher extends Component {
     );
   }
 }
-class MyForm extends Component {
-  render() {
-    return (
-      <section>
-        <form>
-          <input></input>
-        </form>
-      </section>
-    );
-  }
-}
+const MyForm = () => {
+  return (
+    <section>
+      <form>
+        <input></input>
+      </form>
+    </section>
+  );
+};
 export default Searcher;

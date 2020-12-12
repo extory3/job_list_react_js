@@ -7,21 +7,15 @@ header {
   -ms-flex-align: center;
   -webkit-align-items: center;
   align-items: center;
-  border-bottom: 3px solid #e8f4f0;
+  border-bottom: 2px solid #b088f9;
   justify-content: space-between;
-  margin-bottom: 4em;
+  margin-bottom: 2.5em;
   position: sticky;
   position: -webkit-sticky;
   top: 0;
   z-index: 2;
 }
-
 #logo {
-  /* font-size: 1.85em;
-  margin-left: 1.5rem;
-  font-weight: bold;
-  color: #272e4f;
-  height: 100px; */
   background-image: url(./logo_transparent.png);
   background-size: cover;
   background-position: center;

@@ -1,8 +1,8 @@
 .searcher_container {
-  width: 60%;
-  height: 300px;
+  width: 85%;
+  min-height: 450px;
   margin: 0 auto;
-  background-color: var(--primary-color);
+  background-color: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0);
   padding: 1.5em;
 
@@ -21,12 +21,18 @@
 }
 ul {
   margin-top: 0.75em;
-  display: inline-flex;
-  flex-flow: wrap;
+  display: inline-block;
 }
 ul li {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none;
   list-style-type: none;
   cursor: pointer;
+  float: left;
   text-align: center;
   border: 2px solid #e6e6e6;
   width: 130px;
@@ -37,8 +43,16 @@ ul li {
   padding: 0.25em;
 }
 
-ul li:hover {
+ul li.isOff:hover {
   background-color: #f2f4fb;
+}
+ul li.isOn {
+  color: #ffffff;
+  border-color: #b088f9;
+  background-color: #b088f9;
+}
+ul li.isOn:hover {
+  background-color: rgba(176, 136, 249, 0.85);
 }
 
 input {
@@ -46,4 +60,9 @@ input {
   width: 60%;
   padding: 1.1em 1.5em;
   border: 2px solid #e6e6e6;
+  border-radius: 5px;
+}
+form input:focus {
+  border-color: #b088f9;
+  outline: #b088f9;
 }
