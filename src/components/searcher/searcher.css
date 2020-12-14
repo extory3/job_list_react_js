@@ -51,6 +51,7 @@ ul li.isOn {
   border-color: #b088f9;
   background-color: #b088f9;
 }
+
 ul li.isOn:hover {
   background-color: rgba(176, 136, 249, 0.85);
 }

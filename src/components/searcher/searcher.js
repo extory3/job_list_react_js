@@ -1,15 +1,43 @@
 import React, { Component } from "react";
 import "./searcher.css";
 const job_type_items = ["Engineering", "Design", "Marketing", "IT", "Business"];
-const n = job_type_items.length;
+const english_level = [
+  "Not Required",
+  "Fluent",
+  "Conversational",
+  "Business Level",
+];
+const korean_level = [
+  "Not Required",
+  "Fluent",
+  "Conversational",
+  "Business Level",
+];
+const n = job_type_items.length + english_level.length;
 
 class Searcher extends Component {
   constructor(props) {
     super(props);
-    this.state = { isToggleOn: [false, false, false, false, false] };
+    this.state = {
+      isToggleOn: [],
+    };
 
     this.handleClick = this.handleClick.bind(this);
   }
+
+  // ListOfButtons(props) {
+  //   return (
+  //     <section>
+  //       <p>{props.title}</p>
+  //       <ul>
+  //         {korean_level.map((a, index) => {
+  //           return <li>{a}</li>;
+  //         })}
+  //       </ul>
+  //     </section>
+  //   );
+  // }
+
   handleClick = (index) => {
     var getState = this.state.isToggleOn;
     if (this.state.isToggleOn[index] == true) getState[index] = false;
@@ -22,7 +50,12 @@ class Searcher extends Component {
         <div className="left_filter">
           <section className="location_filter">
             <p>Location</p>
+            <ul>
+              <li>WE</li>
+              <li></li>
+            </ul>
           </section>
+
           <section className="job_type">
             <p>Job Type</p>
             <ul>
@@ -43,10 +76,24 @@ class Searcher extends Component {
           <section className="english_level">
             <p>English Level</p>
             <ul>
-              <li>Not required</li>
-              <li>Fluent</li>
-              <li>Conversational</li>
-              <li>Business Level</li>
+              {english_level.map((a, index) => {
+                return (
+                  <li
+                    key={a}
+                    className={
+                      this.state.isToggleOn[index + job_type_items.length]
+                        ? "isOn"
+                        : "isOff"
+                    }
+                    onClick={this.handleClick.bind(
+                      this,
+                      index + job_type_items.length
+                    )}
+                  >
+                    {a}
+                  </li>
+                );
+              })}
             </ul>
           </section>
         </div>
