@@ -1,5 +1,5 @@
 header {
-  background-color: #f9fcfb;
+  background-color: #ffffff;
   width: 100%;
   min-height: 80px;
   display: flex;
@@ -13,8 +13,9 @@ header {
   position: sticky;
   position: -webkit-sticky;
   top: 0;
-  z-index: 2;
+  z-index: 6;
 }
+
 #logo {
   background-image: url(./logo_transparent.png);
   background-size: cover;

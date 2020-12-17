@@ -1,6 +1,13 @@
 import React, { Component } from "react";
 import "./searcher.css";
-const job_type_items = ["Engineering", "Design", "Marketing", "IT", "Business"];
+const job_type_items = [
+  "Front-End",
+  "Back-End",
+  "AI",
+  "IT",
+  "Business",
+  "Others",
+];
 const english_level = [
   "Not Required",
   "Fluent",

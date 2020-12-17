@@ -10,7 +10,17 @@
 
 body {
   font-family: "B612", sans-serif;
-  background-color: #f7f7f7;
+  background-color: #e0ffff;
+  position: relative;
+}
+.cloud {
+  background-image: url("./codepen.svg");
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 20px;
+  top: 200px;
+  z-index: -2;
 }
 body::-webkit-scrollbar {
   width: 12px;
